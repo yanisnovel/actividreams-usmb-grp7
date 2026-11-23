@@ -1,8 +1,4 @@
-# ActiviDreams
+# Instructions
 
-Mini-Projet TP de Base de données (INFO306)
-
-
-Groupe 7
-------------------
-USMB DPT Informatique
+1. Remplir les deux variables en tête du fichier bdd.php
+2. NE PLUS toucher aux fichiers bdd.php, utility.php
