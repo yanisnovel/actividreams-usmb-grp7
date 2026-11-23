@@ -10,8 +10,8 @@ get("/activities", function () use ($conn){ // use sert a autoriser la fonction 
 
 // Route GET /activities/:activityId : récupère et renvoie une seule activité grâce à son ID dans l'URL
 get("/activities/:activityId", function ($param) use ($conn){
-    $id_activity = $id["activityId"];
-    return showAllactivitiesByID($conn, $param);
+    $id_activity = $param["activityId"];
+    return showAllactivitiesByID($conn, $id_activity);
 });
 
 
