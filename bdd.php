@@ -1,7 +1,7 @@
 <?php
 
 #To fill
-$username = "info_grp7";
+$username = "info_gr7";
 $password = "5Lv";
 
 function db()

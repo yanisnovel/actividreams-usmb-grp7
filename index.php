@@ -3,13 +3,17 @@ include_once "bdd.php";
 include_once "utility.php";
 include "Controllers/ActivityController.php";
 
+$conn = db();
+
 // Route GET /activities : récupère et renvoie toutes les activités en utilisant la connexion $conn
-get("/activities", function () use ($conn){ // use sert a autoriser la fonction anonyme a se servir de cette variable
+get("/activities", function (){
+    global $conn;
     return showAllactivities($conn);
 });
 
 // Route GET /activities/:activityId : récupère et renvoie une seule activité grâce à son ID dans l'URL
-get("/activities/:activityId", function ($param) use ($conn){
+get("/activities/:activityId", function ($param){
+    global $conn;
     $id_activity = $param["activityId"];
     return showAllactivitiesByID($conn, $id_activity);
 });

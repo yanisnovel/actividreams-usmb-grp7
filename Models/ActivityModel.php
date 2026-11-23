@@ -10,8 +10,8 @@ function getAllActivities($conn) {
     return $activities;
 }
 
-function getActivitiesbyID($conn, $id){
-    $sql = "SELECT * FROM Activity  WHERE id = $id";
+function getActivitiesbyID($conn, $id_activity){
+    $sql = "SELECT * FROM Activity WHERE activity_id = $id_activity";
     $result = mysqli_query($conn, $sql);
     $activitie = mysqli_fetch_assoc($result);
     return $activitie;
