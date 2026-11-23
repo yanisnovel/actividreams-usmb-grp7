@@ -12,4 +12,6 @@ function showAllactivitiesByID($conn, $id){
 }
 
 
+
+
 ?>
