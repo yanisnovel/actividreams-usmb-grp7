@@ -1,6 +1,24 @@
 <?php
 include_once "bdd.php";
 include_once "utility.php";
+include "Controllers/ActivityController.php";
+
+// Route GET /activities : récupère et renvoie toutes les activités en utilisant la connexion $conn
+get("/activities", function () use ($conn){ // use sert a autoriser la fonction anonyme a se servir de cette variable
+    return showAllactivities($conn);
+});
+
+// Route GET /activities/:activityId : récupère et renvoie une seule activité grâce à son ID dans l'URL
+get("/activities/:activityId", function ($param) use ($conn){
+    $id_activity = $id["activityId"];
+    return showAllactivitiesByID($conn, $param);
+});
+
+
+
+
+
+
 
 get("/learners/:learnerId", function ($param) {
     $learner_id = $param['learnerId'];
